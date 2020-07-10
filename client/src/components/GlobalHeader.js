@@ -6,12 +6,14 @@ import { Logo, NavLink } from './UIUXUtils';
 
 const Header = styled.div`
   background: #171a21;
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   min-width: 940px;
   font-size: 14px;
   padding: 0 16px;
+  margin: 0 auto;
+  z-index: 200;
 `;
 
 const MobileMenuDisplay = styled.div`
@@ -40,6 +42,7 @@ const SideMenuButton = styled.img`
 
 const DesktopMenuDisplay = styled.div`
   display: none;
+  position: relative;
   @media screen and (min-width: 940px) {
     display: flex;
     width: 940px;

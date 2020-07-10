@@ -7,20 +7,25 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   html, body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif!important;
     font-size: 12px;
     color: #c6d4df;
     height: 100%;
+    width: 100%;
     background: #1B2838;
+  }
+  html {
+    overflow: hidden;
   }
   body {
     min-width: 320px;
+    overflow: auto;
   }
   .emphasis-font {
     font-family: 'Roboto', sans-serif;
   }
   #root {
-    width: 940px;
+    width: 100%;
     margin: 0 auto;
   }
   img {
@@ -37,7 +42,7 @@ export const GlobalStyle = createGlobalStyle`
     height: 21px;
     width: 14px;
     background: transparent;
-    z-index: 12;
+    z-index: 500;
     overflow: visible;
   }
   ::-webkit-scrollbar-corner {
@@ -47,7 +52,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 10px;
     background-color: #434953;
     border-radius: 10px;
-    z-index: 12;
+    z-index: 500;
     border: 4px solid rgba(0,0,0,0);
     background-clip: padding-box;
     transition: background-color .32s ease-in-out;

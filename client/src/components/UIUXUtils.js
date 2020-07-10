@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const SVG = styled.svg`
+const ChevronSVG = styled.svg`
   stroke: #bdbdbd;
   stroke-width: 3;
   stroke-linecap: square;
@@ -17,14 +17,29 @@ const SVG = styled.svg`
 
 // Mobile side menu down/up arrow
 export const ChevronDownIcon = ({ isActive }) => (
-  <SVG width='20' height='13' isActive={isActive}>
+  <ChevronSVG width='20' height='13' isActive={isActive}>
     <polyline points='3 3, 10 10, 17 3'></polyline>
-  </SVG>
+  </ChevronSVG>
 );
 
 ChevronDownIcon.propTypes = {
   isActive: PropTypes.bool
 };
+
+const SearchSVG = styled.svg`
+  stroke: #395f80;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+`;
+
+export const SearchIcon = () => (
+  <SearchSVG viewBox='0 0 100 100'>
+    <circle cx='43' cy='43' r='17' />
+    <polygon points='60,65 65,60 75,70 70,75' fill="#395f80" />
+  </SearchSVG>
+);
 
 // Steam / Valve logos - different styling for mobile menu vs. desktop menu
 export const Logo = styled.img`

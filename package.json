@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "nodemon server/index.js",
     "client:dev": "webpack-dev-server --mode development",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {

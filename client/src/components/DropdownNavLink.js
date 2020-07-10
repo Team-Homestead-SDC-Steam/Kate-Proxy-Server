@@ -18,8 +18,10 @@ const Dropdown = styled.div`
   text-align: left;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
   ${HoverNavLink}:hover & {
     opacity: 1;
+    pointer-events: auto;
   }
 `;
 

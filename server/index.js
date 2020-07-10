@@ -59,10 +59,10 @@ gameDesc.get('/:gameid', (req, res) => {
  * DAMIEN - REVIEWS GRAPH
  */
 const reviewsGraph = express.Router();
-app.use('/api/reviews', reviewsGraph);
+app.use('/api/reviewcount', reviewsGraph);
 reviewsGraph.get('/:gameid', (req, res) => {
   let { gameid } = req.params;
-  fetch(`http://localhost:3002/api/reviews/${gameid}`)
+  fetch(`http://localhost:3002/api/reviewcount/${gameid}`)
     .then(response => response.json())
     .then(results => {
       res.status(200).json(results);
@@ -75,7 +75,7 @@ reviewsGraph.get('/:gameid', (req, res) => {
 
 reviewsGraph.get('/detail/:gameid', (req, res) => {
   let { gameid } = req.params;
-  fetch(`http://localhost:3002/api/reviews/detail/${gameid}`)
+  fetch(`http://localhost:3002/api/reviewcount/detail/${gameid}`)
     .then(response => response.json())
     .then(results => {
       res.status(200).json(results);
@@ -88,7 +88,7 @@ reviewsGraph.get('/detail/:gameid', (req, res) => {
 
 reviewsGraph.get('/recent/:gameid', (req, res) => {
   let { gameid } = req.params;
-  fetch(`http://localhost:3002/api/reviews/recent/${gameid}`)
+  fetch(`http://localhost:3002/api/reviewcount/recent/${gameid}`)
     .then(response => response.json())
     .then(results => {
       res.status(200).json(results);
@@ -101,7 +101,7 @@ reviewsGraph.get('/recent/:gameid', (req, res) => {
 
 reviewsGraph.get('/recent/detail/:gameid', (req, res) => {
   let { gameid } = req.params;
-  fetch(`http://localhost:3002/api/reviews/recent/detail/${gameid}`)
+  fetch(`http://localhost:3002/api/reviewcount/recent/detail/${gameid}`)
     .then(response => response.json())
     .then(results => {
       res.status(200).json(results);
@@ -117,7 +117,7 @@ reviewsGraph.get('/recent/detail/:gameid', (req, res) => {
  */
 const userTags = express.Router();
 app.use('/api/tags', userTags);
-reviewsGraph.get('/:gameid', (req, res) => {
+userTags.get('/:gameid', (req, res) => {
   let { gameid } = req.params;
   fetch(`http://localhost:3006/api/tags/${gameid}`)
     .then(response => response.json())
@@ -217,6 +217,9 @@ sysReqs.get('/:gameid', (req, res) => {
     });
 });
 
+app.get('/app/:gameid', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'public', 'index.html'));
+});
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(`Server listening on port ${process.env.PORT || 3000}`)

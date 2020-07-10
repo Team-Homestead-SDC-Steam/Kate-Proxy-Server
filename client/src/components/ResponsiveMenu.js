@@ -15,7 +15,7 @@ const Backdrop = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 300;
   pointer-events: none;
   opacity: ${props => props.visible ? '1' : '0'};
   transition: opacity 0.5s ease-in-out;
@@ -26,7 +26,7 @@ const ResponsiveMenuContainer = styled.div`
   top: 0;
   bottom: 0;
   left: ${props => props.open ? '0px' : '-280px'};
-  z-index: 15;
+  z-index: 301;
   transition: left 0.5s ease-in-out;
   overflow: hidden;
 `;
