@@ -15,7 +15,7 @@ gameReviews.get('/:gameid', (req, res) => {
   let { gameid } = req.params;
 
   // Build url string with filter query support
-  let urlStr = `http://localhost:3001/api/gamereviews/${gameid}`;
+  let urlStr = `http://ec2-3-14-148-108.us-east-2.compute.amazonaws.com:3001/api/gamereviews/${gameid}`;
   if (Object.keys(req.query).length) {
     urlStr += '?';
   }
@@ -44,7 +44,7 @@ const gameDesc = express.Router();
 app.use('/api/description', gameDesc);
 gameDesc.get('/:gameid', (req, res) => {
   let { gameid } = req.params;
-  fetch(`http://localhost:3005/api/description/${gameid}`)
+  fetch(`http://ec2-3-14-148-108.us-east-2.compute.amazonaws.com:3005/api/description/${gameid}`)
     .then(response => response.json())
     .then(results => {
       res.status(200).json(results);
@@ -62,7 +62,7 @@ const reviewsGraph = express.Router();
 app.use('/api/reviewcount', reviewsGraph);
 reviewsGraph.get('/:gameid', (req, res) => {
   let { gameid } = req.params;
-  fetch(`http://localhost:3002/api/reviewcount/${gameid}`)
+  fetch(`http://ec2-54-185-79-51.us-west-2.compute.amazonaws.com:3002/api/reviewcount/${gameid}`)
     .then(response => response.json())
     .then(results => {
       res.status(200).json(results);
@@ -75,7 +75,7 @@ reviewsGraph.get('/:gameid', (req, res) => {
 
 reviewsGraph.get('/detail/:gameid', (req, res) => {
   let { gameid } = req.params;
-  fetch(`http://localhost:3002/api/reviewcount/detail/${gameid}`)
+  fetch(`http://ec2-54-185-79-51.us-west-2.compute.amazonaws.com:3002/api/reviewcount/detail/${gameid}`)
     .then(response => response.json())
     .then(results => {
       res.status(200).json(results);
@@ -88,7 +88,7 @@ reviewsGraph.get('/detail/:gameid', (req, res) => {
 
 reviewsGraph.get('/recent/:gameid', (req, res) => {
   let { gameid } = req.params;
-  fetch(`http://localhost:3002/api/reviewcount/recent/${gameid}`)
+  fetch(`http://ec2-54-185-79-51.us-west-2.compute.amazonaws.com:3002/api/reviewcount/recent/${gameid}`)
     .then(response => response.json())
     .then(results => {
       res.status(200).json(results);
@@ -101,7 +101,7 @@ reviewsGraph.get('/recent/:gameid', (req, res) => {
 
 reviewsGraph.get('/recent/detail/:gameid', (req, res) => {
   let { gameid } = req.params;
-  fetch(`http://localhost:3002/api/reviewcount/recent/detail/${gameid}`)
+  fetch(`http://ec2-54-185-79-51.us-west-2.compute.amazonaws.com:3002/api/reviewcount/recent/detail/${gameid}`)
     .then(response => response.json())
     .then(results => {
       res.status(200).json(results);
@@ -119,7 +119,7 @@ const userTags = express.Router();
 app.use('/api/tags', userTags);
 userTags.get('/:gameid', (req, res) => {
   let { gameid } = req.params;
-  fetch(`http://localhost:3006/api/tags/${gameid}`)
+  fetch(`http://ec2-54-185-79-51.us-west-2.compute.amazonaws.com:3006/api/tags/${gameid}`)
     .then(response => response.json())
     .then(results => {
       res.status(200).json(results);
@@ -188,7 +188,7 @@ const photoCarousel = express.Router();
 app.use('/api/media', photoCarousel);
 photoCarousel.get('/:gameid', (req, res) => {
   let { gameid } = req.params;
-  fetch(`http://localhost:3004/api/media/${gameid}`)
+  fetch(`http://ec2-18-188-192-44.us-east-2.compute.amazonaws.com:3004/api/media/${gameid}`)
     .then(response => response.json())
     .then(results => {
       res.status(200).json(results);

@@ -21,9 +21,6 @@ export const GlobalStyle = createGlobalStyle`
     min-width: 320px;
     overflow: auto;
   }
-  .emphasis-font {
-    font-family: 'Roboto', sans-serif;
-  }
   #root {
     width: 100%;
     margin: 0 auto;
