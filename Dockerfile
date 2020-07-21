@@ -1,6 +1,3 @@
-# sudo docker build -t steam-proxy .
-# sudo docker run -d -p 3000:3000 --name steam-proxy steam-proxy
-
 FROM node:12
 WORKDIR /usr/src/app
 
