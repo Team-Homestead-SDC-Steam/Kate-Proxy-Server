@@ -137,7 +137,7 @@ const dlc = express.Router();
 app.use('/api/dlc', dlc);
 dlc.get('/:gameid', (req, res) => {
   let { gameid } = req.params;
-  fetch(`http://ec2-54-193-86-65.us-west-1.compute.amazonaws.com:3003/api/dlc/${gameid}`)
+  fetch(`http://ec2-13-56-224-137.us-west-1.compute.amazonaws.com:3003/api/dlc/${gameid}`)
     .then(response => response.json())
     .then(results => {
       res.status(200).json(results);
@@ -152,7 +152,7 @@ const gameName = express.Router();
 app.use('/api/name', gameName);
 gameName.get('/:gameid', (req, res) => {
   let { gameid } = req.params;
-  fetch(`http://ec2-54-193-86-65.us-west-1.compute.amazonaws.com:3003/api/name/${gameid}`)
+  fetch(`http://ec2-13-56-224-137.us-west-1.compute.amazonaws.com:3003/api/name/${gameid}`)
     .then(response => response.json())
     .then(results => {
       res.status(200).json(results);

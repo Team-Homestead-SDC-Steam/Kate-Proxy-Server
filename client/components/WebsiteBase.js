@@ -31,6 +31,9 @@ const WebsiteBase = () => {
     let gameid = getPathId();
     fetchGameTitle(gameid)
       .then(res => {
+        if (res.error) {
+          throw new Error(res.error);
+        }
         setGameTitle(res[0].gameTitle);
       })
       .catch(e => {
@@ -65,13 +68,11 @@ const WebsiteBase = () => {
           <PageContent>
             <Columns>
               <LeftCol>
-                Left col stuff
                 <div id="dlc"></div>
                 <div id="system-requirements"></div>
                 <div id="related-games"></div>
               </LeftCol>
               <RightCol>
-                Right col stuff
               </RightCol>
             </Columns>
             <div id="reviews-graph"></div>
