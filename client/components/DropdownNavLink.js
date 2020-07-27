@@ -3,12 +3,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { NavLink } from './UIUXUtils';
 
-const HoverNavLink = styled(NavLink)`
-  #${props => props.theme.rootId} & {
-    position: relative;
-  }
-`;
-
 const Dropdown = styled.div`
   #${props => props.theme.rootId} & {
     position: absolute;
@@ -22,9 +16,17 @@ const Dropdown = styled.div`
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
     pointer-events: none;
-    ${HoverNavLink}:hover & {
-      opacity: 1;
-      pointer-events: auto;
+  }
+`;
+
+const HoverNavLink = styled(NavLink)`
+  #${props => props.theme.rootId} & {
+    position: relative;
+    :hover {
+      ${Dropdown} {
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
   }
 `;
