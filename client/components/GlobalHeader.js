@@ -5,99 +5,119 @@ import DropdownNavLink from './DropdownNavLink';
 import { Logo, NavLink } from './UIUXUtils';
 
 const Header = styled.div`
-  background: #171a21;
-  position: relative;
-  left: 0;
-  right: 0;
-  min-width: 940px;
-  font-size: 14px;
-  padding: 0 16px;
-  margin: 0 auto;
-  z-index: 200;
+  #${props => props.theme.rootId} & {
+    background: #171a21;
+    position: relative;
+    left: 0;
+    right: 0;
+    min-width: 940px;
+    font-size: 14px;
+    padding: 0 16px;
+    margin: 0 auto;
+    z-index: 200;
+  }
 `;
 
 const MobileMenuDisplay = styled.div`
-  display: none;
-  @media screen and (max-width: 940px) {
-    display: flex;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #171a21;
-    text-align: center;
-    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.75);
-    overflow: hidden;
-    padding: 13px 8px;
+  #${props => props.theme.rootId} & {
+    display: none;
+    @media screen and (max-width: 940px) {
+      display: flex;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #171a21;
+      text-align: center;
+      box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.75);
+      overflow: hidden;
+      padding: 13px 8px;
+    }
   }
 `;
 
 const SideMenuButton = styled.img`
-  height: 31px;
-  padding-top: 2px;
-  cursor: pointer;
-  position: absolute;
+  #${props => props.theme.rootId} & {
+    height: 31px;
+    padding-top: 2px;
+    cursor: pointer;
+    position: absolute;
+  }
 `;
 
 const DesktopMenuDisplay = styled.div`
-  display: none;
-  position: relative;
-  @media screen and (min-width: 940px) {
-    display: flex;
-    width: 940px;
-    height: 104px;
-    margin: 0 auto;
+  #${props => props.theme.rootId} & {
+    display: none;
+    position: relative;
+    @media screen and (min-width: 940px) {
+      display: flex;
+      width: 940px;
+      height: 104px;
+      margin: 0 auto;
+    }
   }
 `;
 
 const NavLinkContainer = styled.div`
-  padding-left: 0px;
-  display: flex;
-  position: relative;
+  #${props => props.theme.rootId} & {
+    padding-left: 0px;
+    display: flex;
+    position: relative;
+  }
 `;
 
 const GlobalActions = styled.div`
-  position: absolute;
-  right: 0;
-  top: 6px;
-  height: 21px;
-  line-height: 21px;
-  color: #b8b6b4;
-  font-size: 11px;
+  #${props => props.theme.rootId} & {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    height: 21px;
+    line-height: 21px;
+    color: #b8b6b4;
+    font-size: 11px;
+  }
 `;
 
 const ActionsLinks = styled.div`
-  cursor: pointer;
-  display: inline-block;
-  box-sizing: border-box;
+  #${props => props.theme.rootId} & {
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+  }
 `
 
 const InstallButton = styled(ActionsLinks)`
-  height: 24px;
-  line-height: 24px;
-  margin-right: 3px;
-  color: #e5e4dc;
-  padding-left: 35px;
-  padding-right: 9px;
-  background-color: #5c7e10;
-  background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_download.png?v=1);
-  background-repeat: no-repeat;
-  background-position: 10px 5px;
-  &:hover {
-    color: #fff;
+  #${props => props.theme.rootId} & {
+    height: 24px;
+    line-height: 24px;
+    margin-right: 3px;
+    color: #e5e4dc;
+    padding-left: 35px;
+    padding-right: 9px;
+    background-color: #5c7e10;
+    background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_download.png?v=1);
+    background-repeat: no-repeat;
+    background-position: 10px 5px;
+    &:hover {
+      color: #fff;
+    }
   }
 `;
 
 const LoginLink = styled(ActionsLinks)`
-  padding: 0 9px;
+  #${props => props.theme.rootId} & {
+    padding: 0 9px;
+  }
 `;
 
 const LanguageLink = styled(ActionsLinks)`
-  padding: 0 23px 0 9px;
-  background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/popups/btn_arrow_down_padded.png);
-  background-position: right center;
-  background-repeat: no-repeat;
+  #${props => props.theme.rootId} & {
+    padding: 0 23px 0 9px;
+    background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/popups/btn_arrow_down_padded.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
 `;
 
 const GlobalHeader = () => {

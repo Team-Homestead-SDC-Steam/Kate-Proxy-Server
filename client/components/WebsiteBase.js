@@ -18,11 +18,18 @@ import {
   LeftCol,
   RightCol,
 } from './CssComponents';
+import { ThemeProvider } from 'styled-components';
 import GlobalHeader from './GlobalHeader';
 import SubNavBar from './SubNavBar';
 import Breadcrumbs from './Breadcrumbs';
 import { fetchGameTitle, getPathId } from '../utils';
 
+/** THEME */
+const theme = {
+  rootId: 'root'
+};
+
+/** MAIN COMPONENT */
 const WebsiteBase = () => {
   const [gameTitle, setGameTitle] = useState('');
 
@@ -44,6 +51,7 @@ const WebsiteBase = () => {
 
   return (
     <React.Fragment>
+      <ThemeProvider theme={theme}>
       <GlobalHeader />
       <BackgroundImage>
         <TopPadBody>
@@ -80,6 +88,7 @@ const WebsiteBase = () => {
           </PageContent>
         </TopPadBody>
       </BackgroundImage>
+      </ThemeProvider>
     </React.Fragment>
   );
 }
