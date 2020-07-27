@@ -1,10 +1,11 @@
 const express = require('express');
 const path = require('path');
 const fetch = require('node-fetch');
+const expressStaticGzip = require('express-static-gzip');
 const app = express();
 
 app.use(express.json());
-app.use(express.static(path.resolve(__dirname, '..', 'public')));
+app.use('/', expressStaticGzip(path.resolve(__dirname, '..', 'public')));
 
 /**
  * CHRISTINA - GAME REVIEWS
