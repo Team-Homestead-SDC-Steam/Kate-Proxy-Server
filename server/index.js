@@ -1,10 +1,12 @@
 const express = require('express');
 const path = require('path');
 const fetch = require('node-fetch');
+const cors = require('cors');
 const expressStaticGzip = require('express-static-gzip');
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 app.use('/', expressStaticGzip(path.resolve(__dirname, '..', 'public')));
 
 /**
