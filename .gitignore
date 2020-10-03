@@ -2,6 +2,7 @@ public/bundle.js
 public/bundle.js.*
 public/*.bundle.js
 public/*.bundle.js.*
+newrelic.js
 
 stats.json
 

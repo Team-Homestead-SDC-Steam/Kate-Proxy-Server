@@ -24,33 +24,37 @@ module.exports = {
         '/vendor.bundle.js',
         '/bundle.js',
         {
-          src: 'http://ec2-13-59-202-34.us-east-2.compute.amazonaws.com:3001/vendor.bundle.js',
-          defer: 'defer'
-        },
-        {
-          src: 'http://ec2-13-59-202-34.us-east-2.compute.amazonaws.com:3001/bundle.js',
+          src: 'http://localhost:3002/bundle.js',
           defer: 'defer'
         },
         // {
-        //   src: 'http://ec2-54-185-79-51.us-west-2.compute.amazonaws.com:3002/bundle.js',
+        //   src: 'http://ec2-13-59-202-34.us-east-2.compute.amazonaws.com:3001/vendor.bundle.js',
         //   defer: 'defer'
         // },
-        {
-          src: 'http://ec2-13-56-224-137.us-west-1.compute.amazonaws.com:3003/main.js',
-          defer: 'defer'
-        },
-        {
-          src: 'http://ec2-18-188-192-44.us-east-2.compute.amazonaws.com:3004/bundle.js',
-          defer: 'defer'
-        },
-        {
-          src: 'http://ec2-13-59-202-34.us-east-2.compute.amazonaws.com:3005/bundle.js',
-          defer: 'defer'
-        },
-        {
-          src: 'http://ec2-13-59-202-34.us-east-2.compute.amazonaws.com:3005/vendor.bundle.js',
-          defer: 'defer'
-        },
+        // {
+        //   src: 'http://ec2-13-59-202-34.us-east-2.compute.amazonaws.com:3001/bundle.js',
+        //   defer: 'defer'
+        // },
+        // // {
+        // //   src: 'http://ec2-54-185-79-51.us-west-2.compute.amazonaws.com:3002/bundle.js',
+        // //   defer: 'defer'
+        // // },
+        // {
+        //   src: 'http://ec2-13-56-224-137.us-west-1.compute.amazonaws.com:3003/main.js',
+        //   defer: 'defer'
+        // },
+        // {
+        //   src: 'http://ec2-18-188-192-44.us-east-2.compute.amazonaws.com:3004/bundle.js',
+        //   defer: 'defer'
+        // },
+        // {
+        //   src: 'http://ec2-13-59-202-34.us-east-2.compute.amazonaws.com:3005/bundle.js',
+        //   defer: 'defer'
+        // },
+        // {
+        //   src: 'http://ec2-13-59-202-34.us-east-2.compute.amazonaws.com:3005/vendor.bundle.js',
+        //   defer: 'defer'
+        // },
         // {
         //   src: 'http://ec2-54-185-79-51.us-west-2.compute.amazonaws.com:3006/bundle.js',
         //   defer: 'defer'
